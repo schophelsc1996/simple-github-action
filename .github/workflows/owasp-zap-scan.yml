@@ -5,6 +5,9 @@ on: [push]
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     name: Scan the web applications
     steps:
       - name: Checkout
